@@ -52,7 +52,7 @@ model.fit(X_train, y_train)
 print("Model Learned")
 new_travel = pd.DataFrame({"shows" : [100] })
 guess = model.predict(new_travel)
-print(f"gross per guess 100 shows: {guess}")
+print(f"gross per guess 100 shows: {guess[0]:,.2f}")
 
 plt.figure()
 df.groupby("artist")["actual gross"].sum().sort_values(ascending=False).plot(kind="bar", color="skyblue")
